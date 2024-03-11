@@ -1,7 +1,21 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useDispatch } from "react-redux";
+import { addItem } from '../features/CartReducer';
+
 
 const Cocktail = ({image,name,id,info,glass}) => {
+  const dispatch = useDispatch();
+  const cartProduct = {
+     cartId:id,
+    image:image,
+    title:name,
+    glass:glass,
+  };
+  const addToCart = () => {
+    dispatch(addItem({ product: cartProduct }));
+    alert("Item added")
+   };
   return (
     <article className='cocktail'>
      <div className='img-container'>
@@ -12,6 +26,7 @@ const Cocktail = ({image,name,id,info,glass}) => {
      <h4>{glass}</h4>
      <p>{info}</p>
      <Link to={`/cocktail/${id}`} className='btn btn-primary btn-details'>Details</Link>
+     <button className='btn' onClick={addToCart} style={{margin:"10px"}}> add to cart</button>
      </div>
     </article>
   )

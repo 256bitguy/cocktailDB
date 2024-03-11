@@ -1,6 +1,6 @@
 import React from "react";
 import { createBrowserRouter,RouterProvider } from "react-router-dom";
-import {Home,Error,SingleCocktail,About, HomeLayOut} from './pages';
+import {Home,Error,SingleCocktail,About, Cart,HomeLayOut} from './pages';
 
 
 const App=()=>{
@@ -16,6 +16,9 @@ const App=()=>{
         },{
           path:'about',
           element:<About/>
+        },{
+          path:'cart',
+          element:<Cart/>
         }
         ,{
           path:'cocktail/:id',
