@@ -9,7 +9,7 @@ const Home = () => {
   return (
    <main>
      <Suspense fallback={<Loading />}>
-    <SearchForm/>
+    
         </Suspense>
     <CocktailList/>
    </main>

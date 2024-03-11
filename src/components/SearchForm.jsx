@@ -16,14 +16,12 @@ const handleSubmit=(e)=>{
 e.preventDefault();
 }
   return (
-    <section className='section search'>
-      <form className='search-form' onSubmit={handleSubmit}>
+    <section  >
+      <form   onSubmit={handleSubmit}>
         <div className='form-control'>
-          <label htmlFor='name'>
-          search your favorite cocktail
-          </label>
+           
           <input type='text' id='name' ref={searchValue}
-          onChange={searchCocktail}/>
+          onChange={searchCocktail} placeholder='Searh'/>
         </div>
 
 

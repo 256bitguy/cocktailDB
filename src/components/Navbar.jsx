@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../logo.svg'
-
+import SearchForm from "./SearchForm"
 const Navbar = () => {
   return (
    <nav className='navbar'>
@@ -10,6 +10,11 @@ const Navbar = () => {
       <img src={logo} alt='cocktail db logo'
       className='logo'></img>
       </Link>
+      <div style={{
+        height:"100%"
+      }}>
+        <SearchForm/>
+      </div>
       <ul className='nav-links'>
         <li>
           <Link to='/'>
