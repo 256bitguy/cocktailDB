@@ -11,10 +11,12 @@ const Cocktail = ({image,name,id,info,glass}) => {
     image:image,
     title:name,
     glass:glass,
+     
+    
   };
   const addToCart = () => {
     dispatch(addItem({ product: cartProduct }));
-    alert("Item added")
+   
    };
   return (
     <article className='cocktail'>
