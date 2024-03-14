@@ -1,5 +1,7 @@
 import React from "react";
 import Loading from "../components/Loading";
+import { FaCartPlus } from "react-icons/fa";
+
 import { useParams, Link } from "react-router-dom";
 const url = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=";
 
@@ -89,7 +91,9 @@ const {name,image,category,info,glass,instructions,ingredients}=cocktail
             return(item?<span key={index}>{item}</span>:null)
           })}
         </p>
-
+          <span><button><FaCartPlus style={{fontSize:"40px"}}/> </button></span>
+          <h3 style={{letterSpacing:"1px"}}>Add to cart</h3>
+           
       </div>
     </div>
    </section>

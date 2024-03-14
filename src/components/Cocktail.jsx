@@ -11,7 +11,7 @@ const Cocktail = ({image,name,id,info,glass}) => {
     image:image,
     title:name,
     glass:glass,
-     
+     price:id/100
     
   };
   const addToCart = () => {

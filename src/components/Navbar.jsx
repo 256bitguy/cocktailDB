@@ -1,8 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../logo.svg'
+import { FaCartPlus } from "react-icons/fa";
 import SearchForm from "./SearchForm"
+import { useSelector } from 'react-redux';
+
 const Navbar = () => {
+  const cartItems = useSelector((state) => state.cartState.cartItems);
+
   return (
    <nav className='navbar'>
     <div className='nav-center'>
@@ -31,6 +36,9 @@ const Navbar = () => {
             Cart
           </Link>
         </li>
+        <li className='nav-item'>
+              <Link to = "/cart" className='nav-link text-uppercase text-white fs-22 fw-6 ls-1'><FaCartPlus /> <span>{cartItems.length}</span></Link>
+            </li>
 
       </ul>
     

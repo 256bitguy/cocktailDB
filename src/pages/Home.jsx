@@ -1,16 +1,24 @@
- import React,{ Suspense, lazy } from 'react';
+ import React,{ Suspense, lazy, useEffect } from 'react';
 
 import CocktailList from '../components/CocktailList'
-// import SearchForm from '../components/SearchForm'
-import Loading from '../components/Loading';
-const SearchForm =lazy(()=>import('../components/SearchForm'))
+   const url1 = "https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata";
 
 const Home = () => {
+  useEffect(()=>{
+   const fetchMeal=async()=>{
+    try{
+      const response=await fetch(url1);
+      const data=await response.json();
+      console.log(data);
+    }catch(error){
+      console.error(error)
+    }
+   }
+   fetchMeal();
+  },[])
   return (
    <main>
-     <Suspense fallback={<Loading />}>
     
-        </Suspense>
     <CocktailList/>
    </main>
   )

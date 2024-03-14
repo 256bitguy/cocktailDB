@@ -19,7 +19,8 @@ console.log( cartItems)
      <div className='cocktail-footer'>
      <h3>{item.name}</h3>
      <h4>{item.glass}</h4>
-     <p>{item.info}</p>
+     
+     <p>{item.price}</p>
        </div>
     </article>
          
